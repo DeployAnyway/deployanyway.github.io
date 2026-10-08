@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Original terminal friends, developer personalities and Unicode-aware speech bubbles. Try the bro-say release candidate."
+    />
+    <title>DeployAnyway · Candidate playground</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      { "imports": { "node:util": "../browser-format.js" } }
+    </script>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="siblings.js"></script>
+  </head>
+  <body>
+    <main>
+      <a href="https://deployanyway.github.io/">DeployAnyway</a>
+      <p class="eyebrow">0.3 RELEASE CANDIDATE · NOT YET ON NPM</p>
+      <h1>Your terminal deserves emotional support.</h1>
+      <p>
+        Original characters. Questionable confidence. Your message stays yours.
+      </p>
+      <form id="controls">
+        <label class="message"
+          >Message<textarea id="message" rows="3" maxlength="2000">
+The deployment succeeded somehow. 👋</textarea>
+        </label>
+        <label>Character<select id="character"></select></label>
+        <label>Personality<select id="mood"></select></label>
+        <label>Theme<select id="theme"></select></label>
+        <label
+          >Mode<select id="mode">
+            <option value="say">Say</option>
+            <option value="think">Think</option>
+          </select></label
+        >
+        <label
+          >Content width<input
+            id="width"
+            type="number"
+            min="8"
+            max="100"
+            value="42"
+        /></label>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <div class="terminal">
+        <pre id="output" aria-label="Rendered terminal output"></pre>
+      </div>
+      <button id="copy" type="button">Copy output</button>
+      <p>Runs entirely in your browser. No message is sent anywhere.</p>
+      <p>
+        <a href="https://github.com/DeployAnyway/bro-say/tree/feature/flagship"
+          >Source and candidate instructions</a
+        >
+        · Fonts may disagree on emoji width.
+      </p>
+      <section aria-labelledby="siblings-title">
+        <h2 id="siblings-title">
+          Four more tools. The same engineering standard.
+        </h2>
+        <p>
+          These 0.3 candidates are not on npm yet. This playground uses their
+          actual APIs, with a single-string browser formatter for doggo-log.
+        </p>
+        <label
+          >Error batch (JSON array)<textarea id="errors">
+["ENOENT","ECONNREFUSED"]</textarea></label
+        ><button id="translate" type="button">Ask the duck</button>
+        <pre id="translations" class="terminal" aria-live="polite"></pre>
+        <label>Excuse category<select id="excuse-category"></select></label
+        ><button id="excuse-report" type="button">
+          Joke, then useful next step
+        </button>
+        <pre id="excuse-output" class="terminal" aria-live="polite"></pre>
+        <label>Request ID<input id="request-id" value="demo-42" /></label
+        ><button id="log-context" type="button">Fetch a structured log</button>
+        <pre id="log-output" class="terminal" aria-live="polite"></pre>
+        <label
+          >Release evidence (JSON)<textarea id="evidence">
+{"tests":42,"coverage":92,"build":true}</textarea></label
+        ><button id="gate" type="button">Check the gate</button>
+        <pre id="gate-output" class="terminal" aria-live="polite"></pre>
+      </section>
+      <footer>Tools for developers who probably know better.</footer>
+    </main>
+  </body>
+</html>
