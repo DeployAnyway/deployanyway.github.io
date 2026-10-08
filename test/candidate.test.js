@@ -34,7 +34,7 @@ test("candidate presentation is honest and renders input as text", () => {
     new URL("../candidate/index.html", import.meta.url),
     "utf8",
   );
-  assert.match(html, /NOT YET ON NPM/);
+  assert.match(html, /AVAILABLE ON NPM/);
   assert.match(html, /aria-live="polite"/);
   for (const file of ["app.js", "siblings.js"])
     assert.doesNotMatch(
