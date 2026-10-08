@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deployanyway.github.io/sitemap.xml

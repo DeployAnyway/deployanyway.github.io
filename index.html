@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeployAnyway — Useful tools. Questionable priorities.</title>
+    <meta
+      name="description"
+      content="Try five funny, useful JavaScript developer tools: error translations, developer excuses, dog logs, deployment readiness and terminal hype. Free, open source, on npm."
+    />
+    <meta
+      property="og:title"
+      content="DeployAnyway — Tools for developers who probably should know better."
+    />
+    <meta
+      property="og:description"
+      content="Software nobody requested, built with questionable priorities, and shipped with absolute confidence. Try the tools right in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deployanyway.github.io/" />
+    <meta name="theme-color" content="#171621" />
+    <link rel="canonical" href="https://deployanyway.github.io/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      { "imports": { "node:util": "./browser-format.js" } }
+    </script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#playground">Skip to demos</a>
+    <header>
+      <a class="brand" href="#">D<span>↗</span> DeployAnyway</a>
+      <nav aria-label="Main">
+        <a href="#playground">Try the tools</a
+        ><a href="https://github.com/DeployAnyway">GitHub ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">
+            <span class="dot"></span> OPEN SOURCE / QUESTIONABLY SUPERVISED
+          </p>
+          <h1>Useful tools.<br />Questionable<br /><em>priorities.</em></h1>
+          <p class="lead">For developers who probably should know better.</p>
+          <p class="sub">
+            Software nobody requested, built with questionable priorities, and
+            shipped with absolute confidence!
+          </p>
+          <a class="primary" href="#playground"
+            >Inspect the questionable decisions <span>↓</span></a
+          >
+          <p class="facts">
+            5 packages · Node 22+ · Zero production dependencies · MIT
+          </p>
+        </div>
+        <aside class="receipt" aria-label="Deployment confidence receipt">
+          <div class="receipt-head">DEPLOYMENT RECEIPT <span>№ 0005</span></div>
+          <p class="stamp">ABSOLUTE<br />CONFIDENCE</p>
+          <dl>
+            <div>
+              <dt>Tests</dt>
+              <dd>Actually included</dd>
+            </div>
+            <div>
+              <dt>Priorities</dt>
+              <dd>Under review</dd>
+            </div>
+            <div>
+              <dt>Production dependencies</dt>
+              <dd>0</dd>
+            </div>
+            <div>
+              <dt>Sense of humor</dt>
+              <dd>Non-optional*</dd>
+            </div>
+          </dl>
+          <p class="receipt-foot">
+            *The jokes are optional.<br />The useful parts are real.
+          </p>
+          <div class="barcode" aria-hidden="true"></div>
+        </aside>
+      </section>
+      <section id="playground" class="playground">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">THE TOOLBOX</p>
+            <h2>Try before you <s>think</s> ship.</h2>
+          </div>
+          <p>
+            Real package logic. Right here in your browser.<br />No account. No
+            API keys. No meeting.
+          </p>
+        </div>
+        <div class="demo-layout">
+          <div
+            class="tool-tabs"
+            role="tablist"
+            aria-label="Developer tools"
+            aria-orientation="vertical"
+          ></div>
+          <div class="demo-panel" role="tabpanel" id="demo-panel" tabindex="0">
+            <div class="panel-heading">
+              <p id="tool-category" class="eyebrow"></p>
+              <h3 id="tool-title"></h3>
+              <p id="tool-description"></p>
+            </div>
+            <form id="demo-form">
+              <div id="fields" class="fields"></div>
+              <button class="primary" type="submit">
+                Run the questionable decision <span>↗</span>
+              </button>
+            </form>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span aria-hidden="true">● ● ●</span
+                ><span id="output-label">OUTPUT</span>
+              </div>
+              <pre id="output" aria-live="polite" aria-atomic="true"></pre>
+            </div>
+            <div class="install">
+              <code id="command"></code
+              ><button type="button" id="copy">Copy command</button>
+            </div>
+            <p id="copy-status" class="status" role="status"></p>
+            <div class="tool-links">
+              <a id="npm-link">Get it on npm ↗</a
+              ><a id="source-link">Read the docs ↗</a>
+            </div>
+            <p id="caveat" class="caveat"></p>
+          </div>
+        </div>
+      </section>
+      <section class="manifesto">
+        <p class="eyebrow">THE VERY SHORT MANIFESTO</p>
+        <h2>
+          Small tools.<br />Clear behavior.<br /><span
+            >At least some evidence.</span
+          >
+        </h2>
+        <div>
+          <p>
+            Translate the error. Prepare an excuse. Give your logs a good dog.
+            Check the deployment evidence. Let your terminal applaud.
+          </p>
+          <p>
+            CLI tools for the quick fix. JavaScript APIs for the real project.
+            Original, workplace-safe humor for whatever happens next.
+          </p>
+          <a
+            href="https://github.com/DeployAnyway/.github/blob/main/MEET-DEPLOYANYWAY.md"
+            >Meet the dependencies you can explain later ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#">D<span>↗</span> DeployAnyway</a>
+      <p>The priorities are questionable. The tools have tests.</p>
+      <a href="https://github.com/DeployAnyway"
+        >Contribute something we should have thought of ↗</a
+      >
+    </footer>
+    <noscript
+      ><p class="notice">
+        Enable JavaScript for interactive demos. All tools and examples are also
+        available at <a href="https://github.com/DeployAnyway">GitHub</a>.
+      </p></noscript
+    >
+  </body>
+</html>
