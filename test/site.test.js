@@ -1,34 +1,44 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { translateError } from "../vendor/error-translator/index.js";
-import { excuseBatch } from "../vendor/excuse-js/index.js";
-import { preflight } from "../vendor/ship-it-meter/index.js";
-import { brosay } from "../vendor/bro-say/index.js";
-test("vendored capabilities match demo expectations", () => {
-  assert.match(
-    translateError("ENOENT", { mode: "rubber-duck" }).explanation,
-    /hide-and-seek/,
-  );
-  assert.equal(
-    new Set(excuseBatch("deployment", { seed: "demo", count: 3 })).size,
-    3,
-  );
-  assert.ok(
-    preflight({
-      tests: 10,
-      coverage: 82,
-      build: true,
-      day: "friday",
-    }).actions.some((x) => x.includes("on-call")),
-  );
-  assert.ok(brosay("passed", { box: true }).startsWith("+"));
-});
-test("page has discoverable metadata, local assets and accessible output", () => {
+test("root loads released flagship controls and local assets", () => {
   const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
   assert.match(html, /rel="canonical"/);
-  assert.match(html, /aria-live="polite"/);
-  assert.match(html, /type="importmap"/);
-  const app = readFileSync(new URL("../app.js", import.meta.url), "utf8");
-  assert.doesNotMatch(app, /\.innerHTML\s*=/);
+  assert.match(html, /id="character"/);
+  assert.match(html, /id="theme"/);
+  assert.match(html, /id="mode"/);
+  for (const asset of [
+    "app-0.3.0.js",
+    "siblings-0.3.0.js",
+    "style-54d303f2.css",
+  ]) {
+    assert.ok(html.includes(asset));
+    assert.ok(readFileSync(new URL("../" + asset, import.meta.url)).length);
+  }
+  assert.match(html, /template=character.md/);
+  assert.match(html, /template=bug_report.md/);
+});
+test("candidate redirect preserves queries and feedback fragments", () => {
+  const script = readFileSync(
+    new URL("../candidate/redirect.js", import.meta.url),
+    "utf8",
+  );
+  let target;
+  const location = {
+    href: "https://deployanyway.github.io/candidate/?source=old#feedback-title",
+    search: "?source=old",
+    hash: "#feedback-title",
+    replace: (value) => (target = value),
+  };
+  new Function("location", script)(location);
+  assert.equal(
+    target,
+    "https://deployanyway.github.io/?source=old#feedback-title",
+  );
+  const html = readFileSync(
+    new URL("../candidate/index.html", import.meta.url),
+    "utf8",
+  );
+  assert.match(html, /http-equiv="refresh"/);
+  assert.ok(html.includes('href="../"'));
 });
