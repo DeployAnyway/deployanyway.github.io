@@ -8,7 +8,9 @@ Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inpu
 
 Serve this directory with a local HTTP server and open `index.html`. Run `node --test test/*.test.js` with Node 22 or later. GitHub Actions checks the JavaScript and tests on PRs and deploys main through GitHub Pages.
 
-To refresh demos, copy each package's `src/*.js` and MIT license into `vendor/<package>/`, review API changes, and verify all browser interactions. The site does not fetch package code from a third-party CDN at runtime.
+The root serves the released flagship playground with all five tools. `/candidate/` redirects to the root, preserving queries and fragments for existing links. Root entry scripts use versioned names to avoid the previous app's cache.
+
+To refresh demos, copy the four companion packages' browser-safe `src/*.js` and MIT licenses into `vendor/<package>/`. Build bro-say and copy its `dist/browser.js` and third-party license notices into this site's `dist/`. Review API changes and verify all browser interactions. The site does not fetch package code from a third-party CDN at runtime.
 
 ## License
 

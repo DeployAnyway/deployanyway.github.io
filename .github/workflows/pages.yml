@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: node --check app.js
+      - run: node --check app-0.3.0.js && node --check siblings-0.3.0.js && node --check candidate/redirect.js
       - run: node --test test/*.test.js
   deploy:
     if: github.event_name != 'pull_request'
