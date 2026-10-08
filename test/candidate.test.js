@@ -1,11 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { renderBro, listCharacters, moods } from "../candidate/dist/browser.js";
-import { translateErrors } from "../candidate/vendor/error-translator/index.js";
-import { excuseReport } from "../candidate/vendor/excuse-js/index.js";
-import { createDogLogger } from "../candidate/vendor/doggo-log/index.js";
-import { releaseGate } from "../candidate/vendor/ship-it-meter/index.js";
+import { renderBro, listCharacters, moods } from "../dist/browser.js";
+import { translateErrors } from "../vendor/error-translator/index.js";
+import { excuseReport } from "../vendor/excuse-js/index.js";
+import { createDogLogger } from "../vendor/doggo-log/index.js";
+import { releaseGate } from "../vendor/ship-it-meter/index.js";
 test("candidate demo uses actual flagship and sibling APIs", () => {
   assert.equal(listCharacters().length, 13);
   assert.equal(moods().length, 12);
@@ -30,15 +30,12 @@ test("candidate demo uses actual flagship and sibling APIs", () => {
   );
 });
 test("candidate presentation is honest and renders input as text", () => {
-  const html = readFileSync(
-    new URL("../candidate/index.html", import.meta.url),
-    "utf8",
-  );
+  const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
   assert.match(html, /AVAILABLE ON NPM/);
   assert.match(html, /aria-live="polite"/);
-  for (const file of ["app.js", "siblings.js"])
+  for (const file of ["app-0.3.0.js", "siblings-0.3.0.js"])
     assert.doesNotMatch(
-      readFileSync(new URL("../candidate/" + file, import.meta.url), "utf8"),
+      readFileSync(new URL("../" + file, import.meta.url), "utf8"),
       /\.innerHTML\s*=/,
     );
 });
