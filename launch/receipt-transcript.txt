@@ -1,0 +1,27 @@
+Recorded October 9, 2026 from actual Node tests, c8 coverage and syntax-check builds.
+Example source commit: ab56a887da2cd8103f42456585b51873e8c9485d
+Regenerate receipts for your own current committed source; this historical transcript is not a current release artifact.
+
+--- pass: measured test/coverage/build commands ---
+Release build: PASSED
+Build exit: 0
+Tests: 3 passed, 0 failed, 0 skipped
+Duration: not provided
+Commit: ab56a887da2cd8103f42456585b51873e8c9485d
+Gate: PASS; actual collector exit: 0
+tests: accepted
+coverage: accepted
+build: accepted
+Boring, verified readiness. Give the checks their share of the applause.
+
+--- fail: measured test/coverage/build commands ---
+Release build: FAILED
+Build exit: 1
+Tests: 3 passed, 0 failed, 0 skipped
+Duration: not provided
+Commit: ab56a887da2cd8103f42456585b51873e8c9485d
+Gate: BLOCKED; actual collector exit: 1
+tests: accepted
+coverage: accepted
+build: build: command exited 1.
+The receipts say stop. Confidence must wait.
