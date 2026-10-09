@@ -2,7 +2,7 @@
 
 Public interactive demo: https://deployanyway.github.io/
 
-Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inputs stay in the browser. The five demos use vendored 0.4.0 package source; the dog logger uses a single-string `node:util` adapter because the form does not accept formatting arguments. This adapter is not a replacement for the npm library's full Node formatting behavior.
+Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inputs stay in the browser. The five demos use vendored 1.0.0 package source; the dog logger uses a single-string `node:util` adapter because the form does not accept formatting arguments. This adapter is not a replacement for the npm library's full Node formatting behavior.
 
 ## Develop
 
@@ -25,3 +25,7 @@ The organization palette and home badge follow the supplied husky artwork. Dalla
 ## License
 
 MIT. Vendored package licenses are included in their directories.
+
+## Practical v1 integrations
+
+Each tool keeps its playful library and adds an equally visible developer-value panel: measured build summaries, Error cause diagnostics, accountable incident drafts, context redaction plus a runnable Node async-scope example, and report-backed release policies. The browser runs actual pure package APIs. AsyncLocalStorage, file reading, CI report collection and process exit preservation run in Node; examples identify those boundaries. Demo receipt data is labeled sample data, never claimed as real CI evidence.
