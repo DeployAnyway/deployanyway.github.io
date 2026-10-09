@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A real DeployAnyway workflow: request-scoped logs, Error cause diagnostics and release gates backed by measured tests, coverage and builds. Fetch the request. Follow the cause. Bring receipts."
+    />
+    <link rel="canonical" href="https://deployanyway.github.io/launch/" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../style-54d303f2.css?v=launch-1" />
+    <title>Fetch. Diagnose. Verify. · DeployAnyway 1.0</title>
+    <script type="module" src="launch.js?v=launch-1"></script>
+  </head>
+  <body>
+    <main>
+      <a class="brand-logo" href="/" aria-label="DeployAnyway home"
+        ><img
+          src="../assets/deployanyway-husky.png"
+          alt="DeployAnyway husky developer badge"
+          width="180"
+          height="180"
+      /></a>
+      <p class="eyebrow">DEPLOYANYWAY 1.0 · A REAL WORKFLOW</p>
+      <h1>Fetch the request. Follow the cause. Bring receipts.</h1>
+      <p class="manifesto">
+        Dallas brings the energy. Benji asks whether the build passed.
+      </p>
+      <p>
+        Five small tools, one useful routine: keep the request context, explain
+        the failure, own the incident, preserve the exit code, and check the
+        release evidence. The jokes are optional. The facts aren’t.
+      </p>
+
+      <section class="why" aria-labelledby="request-title">
+        <h2 id="request-title">1. Fetch the request. Guard the context.</h2>
+        <p>
+          <a href="/#doggo-log">doggo-log</a> carries a request ID through an
+          awaited file read and redacts the configured dummy credential before
+          writing.
+        </p>
+        <pre class="preset-library">
+{"requestId":"benji-42","authorization":"[REDACTED]"}
+Dallas fetched the request. Benji checked the config.</pre>
+        <p>
+          AsyncLocalStorage runs in Node. This page shows output from the
+          runnable project, not a browser simulation of a server.
+        </p>
+      </section>
+      <section class="why" aria-labelledby="cause-title">
+        <h2 id="cause-title">2. Follow the cause. Own the problem.</h2>
+        <p>
+          A real missing file triggers an Error wrapped with a cause.
+          <a href="/#error-translator">error-translator</a> finds ENOENT and
+          suggests checking the full path.
+          <a href="/#excuse-js">excuse-js</a> drafts the known impact and action
+          without inventing a next-update time.
+        </p>
+        <pre class="preset-library">
+Caused by: Error [ENOENT]
+File or directory not found
+Try: Check the full path and the current working directory.
+
+Status: investigating
+Current action: Check the cause and restore the configuration file
+Next update: Not scheduled
+Missing facts: nextUpdate</pre>
+        <p>
+          “No victory zoomies yet.” <a href="/#bro-say">bro-say</a> renders
+          FAILED, and the command actually exits 1. The healthy request reads a
+          valid file and exits 0. No incident message is posted.
+        </p>
+      </section>
+      <section class="why" aria-labelledby="receipts-title">
+        <h2 id="receipts-title">3. Confidence needs receipts.</h2>
+        <p>
+          <a href="/#ship-it-meter">ship-it-meter</a> checks fresh completed
+          Node tests, c8 coverage and an actual syntax-check build for the same
+          committed source. Then the example executes deliberately broken
+          JavaScript: the build fails and the gate blocks.
+        </p>
+        <pre class="preset-library">
+Passing build → Gate: PASS; actual collector exit: 0
+Broken build  → Gate: BLOCKED; actual collector exit: 1
+The receipts say stop. Confidence must wait.</pre>
+        <p>
+          This checks the example project—not your production application.
+          Commit and timestamp metadata are trusted-pipeline claims, not
+          signatures. The demonstration harness returns success only when both
+          expected outcomes occur.
+        </p>
+      </section>
+
+      <section class="why" aria-labelledby="run-title">
+        <h2 id="run-title">Run it. Keep the useful bits.</h2>
+        <p>
+          Git and Node 22.13+ or 24. Installs the five exact published 1.0.0
+          packages plus c8 for development.
+        </p>
+        <pre class="preset-library" id="launch-setup">
+git clone https://github.com/DeployAnyway/deployanyway.github.io.git
+cd deployanyway.github.io/launch
+npm ci
+npm run demo
+npm run receipts:demo</pre>
+        <button type="button" id="copy-launch">Copy setup</button>
+        <p id="launch-copy-status" role="status" aria-live="polite"></p>
+        <p>
+          <a
+            href="https://github.com/DeployAnyway/deployanyway.github.io/tree/main/launch"
+            >Source, tests and integration notes</a
+          >
+          · <a href="transcript.txt">Recorded request output</a> ·
+          <a href="receipt-transcript.txt">Recorded measured gate output</a>
+        </p>
+        <p>
+          The collector requires clean tracked source and an unchanged Git
+          commit. Commit edits before running it. The final demo receipt file
+          contains the blocked build; run
+          <code>npm run release:receipts</code> to generate a fresh passing
+          bundle. Credentials here are dummy values. Review real diagnostic
+          messages before logging or sharing them.
+        </p>
+      </section>
+      <footer>
+        <p>
+          Software nobody requested, built with questionable priorities, and
+          shipped with absolute confidence!
+        </p>
+        <p>
+          <a href="/">Try all five tools and their options</a> ·
+          <a href="/#feedback-title">Bugs, ideas and feedback</a> ·
+          <a href="https://www.npmjs.com/org/deployanyway">Install from npm</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

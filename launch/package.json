@@ -1,0 +1,27 @@
+{
+  "name": "deployanyway-real-workflow",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "demo": "node demo.mjs",
+    "failure": "node request.mjs failure",
+    "healthy": "node request.mjs healthy",
+    "test": "node --test test/*.test.js",
+    "build": "node build.mjs",
+    "receipts:demo": "node receipts-demo.mjs",
+    "release:receipts": "node node_modules/@deployanyway/ship-it-meter/examples/collect-receipts.mjs test/workflow.test.js"
+  },
+  "dependencies": {
+    "@deployanyway/bro-say": "1.0.0",
+    "@deployanyway/error-translator": "1.0.0",
+    "@deployanyway/excuse-js": "1.0.0",
+    "@deployanyway/doggo-log": "1.0.0",
+    "@deployanyway/ship-it-meter": "1.0.0"
+  },
+  "devDependencies": {
+    "c8": "12.0.0"
+  }
+}
