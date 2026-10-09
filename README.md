@@ -4,6 +4,8 @@ Public interactive demo: https://deployanyway.github.io/
 
 Launch walkthrough: https://deployanyway.github.io/launch/. The [runnable project](launch/README.md) uses all five published npm packages with actual filesystem failures, request scopes, incident drafts and measured Node/c8/build receipts. CI verifies both passing and blocked builds. [Short launch post](launch/POST.md) is ready to copy and share.
 
+The story behind the project: https://deployanyway.github.io/story/. Dallas and Benji inspire the curiosity, creativity, play and care that lead into the tools on the homepage. The trail vignette is explicitly imagined; no unprovided real-life episode or individual dog personality is asserted.
+
 Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inputs stay in the browser. The five demos use vendored 1.0.0 package source; the dog logger uses a single-string `node:util` adapter because the form does not accept formatting arguments. This adapter is not a replacement for the npm library's full Node formatting behavior.
 
 ## Develop
