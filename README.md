@@ -30,6 +30,8 @@ The organization palette and home badge follow the supplied husky artwork. Dalla
 
 MIT. Vendored package licenses are included in their directories.
 
+Owner-supplied Dallas and Benji photographs are separate from the software license; see [photo notes](assets/huskies/README.md). The homepage uses a compact photo-led introduction, immediate tool navigation, and shared responsive navigation across home, story and workflow pages.
+
 ## Practical v1 integrations
 
 Each tool keeps its playful library and adds an equally visible developer-value panel: measured build summaries, Error cause diagnostics, accountable incident drafts, context redaction plus a runnable Node async-scope example, and report-backed release policies. The browser runs actual pure package APIs. AsyncLocalStorage, file reading, CI report collection and process exit preservation run in Node; examples identify those boundaries. Demo receipt data is labeled sample data, never claimed as real CI evidence.
