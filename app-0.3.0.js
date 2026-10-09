@@ -31,7 +31,7 @@ function render() {
       mode: element("mode").value,
       width: Number(element("width").value),
       wrap:element("bro-wrap").checked,
-      ...(element("bro-layout").value === "plain" ? {character:null} : element("bro-layout").value === "box" ? {box:true} : {}),
+      ...(element("bro-layout").value === "plain" ? {layout:"plain"} : element("bro-layout").value === "box" ? {box:true} : {}),
           ...(random ? {random:true, seed:element("bro-seed").value} : {})
     });
     element("output").textContent=element("bro-format").value === "json" ? JSON.stringify(result,null,2) : result.rendered;
@@ -63,3 +63,4 @@ element("copy").addEventListener("click", async () => {
 render();
 
 element("bro-copy-command").addEventListener("click",async()=>{try {await navigator.clipboard.writeText(element("bro-command").textContent);element("status").textContent="Command copied.";} catch {element("status").textContent="Select and copy the command manually.";}});
+
