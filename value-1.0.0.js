@@ -378,6 +378,10 @@ panel(
     control("receipt-output", "Output", "readable", ["readable", "JSON"]),
   ],
   () => {
+    if (!/^\d+$/.test(val("receipt-build").trim()))
+      throw new TypeError(
+        "Provide an explicit nonnegative integer build exit code.",
+      );
     const meta = {
         commit: val("receipt-source-commit"),
         capturedAt: val("receipt-time"),
