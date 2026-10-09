@@ -2,9 +2,9 @@
 
 Dallas fetches the request. Benji checks the evidence. Neither gets victory zoomies until the commands pass.
 
-This small runnable project uses the five published DeployAnyway1.0.0 packages. It performs a real missing-file request and a healthy request, then collects actual Node test, c8 coverage and build results. The release demonstration includes an actual deliberately invalid syntax check, so the blocked gate is measured rather than a made-up score.
+This small runnable project uses the five published DeployAnyway 1.0.0 packages. It performs a real missing-file request and a healthy request, then collects actual Node test, c8 coverage and build results. The release demonstration includes an actual deliberately invalid syntax check, so the blocked gate is measured rather than a made-up score.
 
-With Git and Node22.13+ or24:
+With Git and Node 22.13+ or 24:
 
 ```sh
 git clone https://github.com/DeployAnyway/deployanyway.github.io.git
@@ -14,7 +14,7 @@ npm run demo
 npm run receipts:demo
 ```
 
-`demo` checks that the missing-file command exits1 and the healthy command exits0. `receipts:demo` checks that the real passing collector exits0 and the failed-build collector exits1; the demonstration harness itself exits0 only if those expectations hold. It leaves the last (blocked) bundle in ignored `receipts.json`. No server is started, request is sent, or incident message is posted.
+`demo` checks that the missing-file command exits 1 and the healthy command exits 0. `receipts:demo` checks that the real passing collector exits 0 and the failed-build collector exits 1; the demonstration harness itself exits 0 only if those expectations hold. It leaves the last (blocked) bundle in ignored `receipts.json`. No server is started, request is sent, or incident message is posted.
 
 For one real check on this example:
 
