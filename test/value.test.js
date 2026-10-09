@@ -1,11 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { renderBuildSummary } from "../dist/browser.js";
-import { diagnoseError } from "../vendor/error-translator/index.js";
-import { incidentUpdate } from "../vendor/excuse-js/index.js";
-import { createDogLogger } from "../vendor/doggo-log/index.js";
-import { evaluateReports } from "../vendor/ship-it-meter/index.js";
+import { renderBuildSummary } from "../dist/browser-1.0.0.js";
+import { diagnoseError } from "../vendor/v1/error-translator/index.js";
+import { incidentUpdate } from "../vendor/v1/excuse-js/index.js";
+import { createDogLogger } from "../vendor/v1/doggo-log/index.js";
+import { evaluateReports } from "../vendor/v1/ship-it-meter/index.js";
 test("v1 demo assets preserve failure, causes, missing facts, redaction and report blockers", () => {
   assert.equal(renderBuildSummary({ exitCode: 1 }).status, "failed");
   assert.equal(renderBuildSummary({}).status, "unknown");
