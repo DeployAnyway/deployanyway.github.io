@@ -1,0 +1,54 @@
+Recorded from the published npm1.0.0 packages. Local project path abbreviated; ordering of stderr can vary.
+
+--- failure: real filesystem request; expected exit 1 ---
+{"level":"info","message":"Dallas fetched the request. Benji checked the config.","context":{"requestId":"benji-42","authorization":"[REDACTED]"}}
+Failure: Error: Request could not load configuration
+Unrecognized error
+
+What happened:
+No built-in translation matches this error yet.
+
+Try:
+- Read the original error and inspect the first relevant line in its stack trace.
+- Check the documentation for the component that reported the error.
+
+---
+
+Caused by: Error [ENOENT]: ENOENT: no such file or directory, open '<project>\missing-config.json'
+File or directory not found
+
+What happened:
+The application tried to use a filesystem path that does not exist.
+
+Likely causes:
+- The path is misspelled
+- The file was moved or deleted
+- A relative path is being resolved from an unexpected working directory
+
+Try:
+- Check the full path and the current working directory.
+- Create the required file or directory if it should exist.
+Status: investigating
+Service: Demo request
+Impact: This demo request could not load its configuration
+Current action: Check the cause and restore the configuration file
+Owner: Demo operator
+Next update: Not scheduled
+Missing facts: nextUpdate
+Request command: FAILED
+Build exit: 1
+Tests: not provided
+Duration: not provided
+Commit: not provided
+Actual child exit: 1
+
+--- healthy: real filesystem request; expected exit 0 ---
+{"level":"info","message":"Dallas fetched the request. Benji checked the config.","context":{"requestId":"benji-42","authorization":"[REDACTED]"}}
+{"level":"info","message":"Configuration loaded. Tail velocity: nominal.","context":{"requestId":"benji-42","authorization":"[REDACTED]"},"prefix":"config"}
+Request command: PASSED
+Build exit: 0
+Tests: not provided
+Duration: not provided
+Commit: not provided
+Actual child exit: 0
+{"level":"error","message":"Configuration failed. No victory zoomies yet.","context":{"requestId":"benji-42","authorization":"[REDACTED]"}}

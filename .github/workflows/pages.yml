@@ -19,6 +19,10 @@ jobs:
           node-version: 24
       - run: node --check app-1.0.0.js && node --check siblings-1.0.0.js && node --check value-1.0.0.js && node --check candidate/redirect.js
       - run: node --test test/*.test.js
+      - run: npm ci
+        working-directory: launch
+      - run: npm test && npm run demo && npm run receipts:demo
+        working-directory: launch
   deploy:
     if: github.event_name != 'pull_request'
     needs: check
