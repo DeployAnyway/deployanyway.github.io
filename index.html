@@ -7,10 +7,12 @@
       name="description"
       content="DeployAnyway: tools for developers who probably should know better. Try five useful, humorous developer tools in your browser."
     />
-    <title>DeployAnyway · Tools for developers who probably should know better</title>
+    <title>
+      DeployAnyway · Tools for developers who probably should know better
+    </title>
     <link rel="canonical" href="https://deployanyway.github.io/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style-54d303f2.css?v=toolbox-1" />
+    <link rel="stylesheet" href="style-54d303f2.css?v=husky-1" />
     <script type="importmap">
       { "imports": { "node:util": "./browser-format.js" } }
     </script>
@@ -19,84 +21,296 @@
   </head>
   <body>
     <main>
-      <a href="https://deployanyway.github.io/">DeployAnyway</a>
+      <a
+        class="brand-logo"
+        href="https://deployanyway.github.io/"
+        aria-label="DeployAnyway home"
+        ><img
+          src="assets/deployanyway-husky.png"
+          alt="DeployAnyway husky developer badge"
+          width="220"
+          height="220"
+      /></a>
       <p class="eyebrow">0.3.0 · AVAILABLE ON NPM</p>
       <h1>DeployAnyway.</h1>
-      <p class="manifesto">Software nobody requested, built with questionable priorities, and shipped with absolute confidence!</p>
-      <p>Tools for developers who probably should know better. We take the jokes seriously—and the useful parts even more seriously.</p>
-      <p>Five small open-source tools for expressing yourself, debugging, regrouping, logging and deciding what to ship. Choose the one that helps your day.</p>
-      <nav class="tool-grid" aria-label="Choose a tool"><a href="#bro-say"><strong>bro-say</strong><span>Give your terminal a personality</span><small>Turn your message into original character art with speech or thought bubbles, personalities and themes.</small></a><a href="#error-translator"><strong>error-translator</strong><span>Make errors understandable</span><small>Translate familiar error codes and messages into explanations and practical debugging advice.</small></a><a href="#excuse-js"><strong>excuse-js</strong><span>Own the problem. Enjoy the excuse.</span><small>Generate a seeded developer excuse, then get a useful next step for the actual work.</small></a><a href="#doggo-log"><strong>doggo-log</strong><span>Good logs. Good dog.</span><small>Write readable or structured logs with levels, prefixes and context for following a request.</small></a><a href="#ship-it-meter"><strong>ship-it-meter</strong><span>Confidence, with receipts</span><small>Evaluate release evidence and see whether the release gate passes. A joke score is no substitute for tests.</small></a></nav>
-      <p>All five packages are AVAILABLE ON NPM at version 0.3.0. These demos run locally in your browser.</p>
-      <section class="tool-section" id="bro-say" aria-labelledby="bro-title">
-      <h2 id="bro-title">bro-say</h2><p>Turn your message into original character art with speech or thought bubbles, personalities and themes.</p>
-      <div class="playground">
-        <form id="controls">
-          <label class="message"
-            >Message<textarea id="message" rows="3" maxlength="2000">
-The deployment succeeded somehow. 👋</textarea>
-          </label>
-          <label>Character<select id="character"></select></label>
-          <label>Personality<select id="mood"></select></label>
-          <label>Theme<select id="theme"></select></label>
-          <label
-            >Mode<select id="mode">
-              <option value="say">Say</option>
-              <option value="think">Think</option>
-            </select></label
-          >
-          <label
-            >Content width<input
-              id="width"
-              type="number"
-              min="8"
-              max="200"
-              value="42"
-          /></label>
-        <label>Layout<select id="bro-layout"><option value="character">Character bubble</option><option value="plain">Plain message</option><option value="box">Legacy box</option></select></label><label>Wrap long lines<input id="bro-wrap" type="checkbox" checked /></label><label>Selection<select id="bro-selection"><option value="manual">Choose options</option><option value="random">Seeded random</option></select></label><label>Random seed<input id="bro-seed" value="demo" /></label><label>Output format<select id="bro-format"><option value="text">Art</option><option value="json">Structured JSON</option></select></label></form>
-        <div class="preview">
-          <p id="status" role="status" aria-live="polite"></p>
-          <div class="terminal">
-            <pre id="output" aria-label="Rendered terminal output"></pre>
-          </div>
-          <button id="copy" type="button">Copy output</button><p>Try it in your terminal (sh/bash):</p><pre id="bro-command" class="command"></pre><button id="bro-copy-command" type="button">Copy command</button>
-        </div>
-      </div>
-      <p>13 original characters, 12 personalities and 6 themes. Say or think; Unicode-aware wrapping. Terminal fonts may disagree on emoji width.</p><p>Runs entirely in your browser. No message is sent anywhere.</p>
-      <p>
-        <code>npm install -g @deployanyway/bro-say@0.3.0</code> ·
-        <a href="https://www.npmjs.com/org/deployanyway"
-          >All five packages on npm</a
-        >
+      <p class="manifesto">
+        Software nobody requested, built with questionable priorities, and
+        shipped with absolute confidence!
       </p>
       <p>
-        <a href="https://github.com/DeployAnyway/bro-say/tree/main"
-          >Source and install instructions</a
-        >
-        · Fonts may disagree on emoji width.
+        Tools for developers who probably should know better. We take the jokes
+        seriously—and the useful parts even more seriously.
       </p>
+      <p>
+        small open-source tools for expressing yourself, debugging, regrouping,
+        logging and deciding what to ship. Choose the one(s) that helps your
+        day.
+      </p>
+      <section class="why" aria-labelledby="why-title">
+        <h2 id="why-title">Serious about the work. Playful about the day.</h2>
+        <p>
+          Dallas and Benji, our fun-loving, high-energy huskies, are the
+          inspiration: bring enthusiasm, make room for play, and approach the
+          next adventure with ridiculous confidence.
+        </p>
+        <p>
+          Developers love to have fun, too. A debugging session can use a rubber
+          duck, a release can use a reality check, and a terminal can use a
+          little personality. DeployAnyway brings that energy to small tools
+          with useful behavior and original humor. The jokes are optional;
+          caring about the work is the point.
+        </p>
       </section>
-<section class="tool-section" id="error-translator" aria-labelledby="error-translator-title"><h2 id="error-translator-title">error-translator</h2><p>Translate familiar error codes and messages into explanations and practical debugging advice.</p>        <label
+      <nav class="tool-grid" aria-label="Choose a tool">
+        <a href="#bro-say"
+          ><strong>bro-say</strong><span>Give your terminal a personality</span
+          ><small
+            >Turn your message into original character art with speech or
+            thought bubbles, personalities and themes.</small
+          ></a
+        ><a href="#error-translator"
+          ><strong>error-translator</strong
+          ><span>Make errors understandable</span
+          ><small
+            >Translate familiar error codes and messages into explanations and
+            practical debugging advice.</small
+          ></a
+        ><a href="#excuse-js"
+          ><strong>excuse-js</strong
+          ><span>Own the problem. Enjoy the excuse.</span
+          ><small
+            >Generate a seeded developer excuse, then get a useful next step for
+            the actual work.</small
+          ></a
+        ><a href="#doggo-log"
+          ><strong>doggo-log</strong><span>Good logs. Good dog.</span
+          ><small
+            >Write readable or structured logs with levels, prefixes and context
+            for following a request.</small
+          ></a
+        ><a href="#ship-it-meter"
+          ><strong>ship-it-meter</strong><span>Confidence, with receipts</span
+          ><small
+            >Evaluate release evidence and see whether the release gate passes.
+            A joke score is no substitute for tests.</small
+          ></a
+        >
+      </nav>
+      <p>
+        All five packages are AVAILABLE ON NPM at version 0.3.0. These demos run
+        locally in your browser.
+      </p>
+      <section class="tool-section" id="bro-say" aria-labelledby="bro-title">
+        <h2 id="bro-title">bro-say</h2>
+        <p>
+          Turn your message into original character art with speech or thought
+          bubbles, personalities and themes.
+        </p>
+        <div class="playground">
+          <form id="controls">
+            <label class="message"
+              >Message<textarea id="message" rows="3" maxlength="2000">
+The deployment succeeded somehow. 👋</textarea>
+            </label>
+            <label>Character<select id="character"></select></label>
+            <label>Personality<select id="mood"></select></label>
+            <label>Theme<select id="theme"></select></label>
+            <label
+              >Mode<select id="mode">
+                <option value="say">Say</option>
+                <option value="think">Think</option>
+              </select></label
+            >
+            <label
+              >Content width<input
+                id="width"
+                type="number"
+                min="8"
+                max="200"
+                value="42"
+            /></label>
+            <label
+              >Layout<select id="bro-layout">
+                <option value="character">Character bubble</option>
+                <option value="plain">Plain message</option>
+                <option value="box">Legacy box</option>
+              </select></label
+            ><label
+              >Wrap long lines<input
+                id="bro-wrap"
+                type="checkbox"
+                checked /></label
+            ><label
+              >Selection<select id="bro-selection">
+                <option value="manual">Choose options</option>
+                <option value="random">Seeded random</option>
+              </select></label
+            ><label>Random seed<input id="bro-seed" value="demo" /></label
+            ><label
+              >Output format<select id="bro-format">
+                <option value="text">Art</option>
+                <option value="json">Structured JSON</option>
+              </select></label
+            >
+          </form>
+          <div class="preview">
+            <p id="status" role="status" aria-live="polite"></p>
+            <div class="terminal">
+              <pre id="output" aria-label="Rendered terminal output"></pre>
+            </div>
+            <button id="copy" type="button">Copy output</button>
+            <p>Try it in your terminal (sh/bash):</p>
+            <pre id="bro-command" class="command"></pre>
+            <button id="bro-copy-command" type="button">Copy command</button>
+          </div>
+        </div>
+        <p>
+          13 original characters, 12 personalities and 6 themes. Say or think;
+          Unicode-aware wrapping. Terminal fonts may disagree on emoji width.
+        </p>
+        <p>Runs entirely in your browser. No message is sent anywhere.</p>
+        <p>
+          <code>npm install -g @deployanyway/bro-say@0.3.0</code> ·
+          <a href="https://www.npmjs.com/org/deployanyway"
+            >All five packages on npm</a
+          >
+        </p>
+        <p>
+          <a href="https://github.com/DeployAnyway/bro-say/tree/main"
+            >Source and install instructions</a
+          >
+          · Fonts may disagree on emoji width.
+        </p>
+      </section>
+      <section
+        class="tool-section"
+        id="error-translator"
+        aria-labelledby="error-translator-title"
+      >
+        <h2 id="error-translator-title">error-translator</h2>
+        <p>
+          Translate familiar error codes and messages into explanations and
+          practical debugging advice.
+        </p>
+        <label
           >Error batch (JSON array)<textarea id="errors">
 ["ENOENT","ECONNREFUSED"]</textarea></label
         ><button id="translate" type="button">Translate error</button>
         <pre id="translations" class="terminal" aria-live="polite"></pre>
-<p class="tool-links"><a href="https://github.com/DeployAnyway/error-translator#readme">Usage and API documentation</a> · <a href="https://www.npmjs.com/package/@deployanyway/error-translator">Install from npm</a> · <a href="https://github.com/DeployAnyway/error-translator/issues/new/choose">Bugs and ideas</a></p></section>
-<section class="tool-section" id="excuse-js" aria-labelledby="excuse-js-title"><h2 id="excuse-js-title">excuse-js</h2><p>Generate a seeded developer excuse, then get a useful next step for the actual work.</p>        <p>Choose every supported category, a repeatable seed, a single excuse, a batch or an excuse with an honest next step.</p><label>Excuse category<select id="excuse-category"></select></label
-        ><button id="excuse-report" type="button">
-          Generate excuse
-        </button>
+        <p class="tool-links">
+          <a href="https://github.com/DeployAnyway/error-translator#readme"
+            >Usage and API documentation</a
+          >
+          ·
+          <a href="https://www.npmjs.com/package/@deployanyway/error-translator"
+            >Install from npm</a
+          >
+          ·
+          <a
+            href="https://github.com/DeployAnyway/error-translator/issues/new/choose"
+            >Bugs and ideas</a
+          >
+        </p>
+      </section>
+      <section
+        class="tool-section"
+        id="excuse-js"
+        aria-labelledby="excuse-js-title"
+      >
+        <h2 id="excuse-js-title">excuse-js</h2>
+        <p>
+          Generate a seeded developer excuse, then get a useful next step for
+          the actual work.
+        </p>
+        <p>
+          Choose every supported category, a repeatable seed, a single excuse, a
+          batch or an excuse with an honest next step.
+        </p>
+        <label>Excuse category<select id="excuse-category"></select></label
+        ><button id="excuse-report" type="button">Generate excuse</button>
         <pre id="excuse-output" class="terminal" aria-live="polite"></pre>
-<p class="tool-links"><a href="https://github.com/DeployAnyway/excuse-js#readme">Usage and API documentation</a> · <a href="https://www.npmjs.com/package/@deployanyway/excuse-js">Install from npm</a> · <a href="https://github.com/DeployAnyway/excuse-js/issues/new/choose">Bugs and ideas</a></p></section>
-<section class="tool-section" id="doggo-log" aria-labelledby="doggo-log-title"><h2 id="doggo-log-title">doggo-log</h2><p>Write readable or structured logs with levels, prefixes and context for following a request.</p>        <label>Request ID<input id="request-id" value="demo-42" /></label
-        ><p>All six log methods are available. JSON shows request context; text shows readable lines. This browser demo formats a single message; Node also supports format arguments, child loggers and ANSI color.</p><button id="log-context" type="button">Run logger</button>
+        <p class="tool-links">
+          <a href="https://github.com/DeployAnyway/excuse-js#readme"
+            >Usage and API documentation</a
+          >
+          ·
+          <a href="https://www.npmjs.com/package/@deployanyway/excuse-js"
+            >Install from npm</a
+          >
+          ·
+          <a href="https://github.com/DeployAnyway/excuse-js/issues/new/choose"
+            >Bugs and ideas</a
+          >
+        </p>
+      </section>
+      <section
+        class="tool-section"
+        id="doggo-log"
+        aria-labelledby="doggo-log-title"
+      >
+        <h2 id="doggo-log-title">doggo-log</h2>
+        <p>
+          Write readable or structured logs with levels, prefixes and context
+          for following a request.
+        </p>
+        <label>Request ID<input id="request-id" value="demo-42" /></label>
+        <p>
+          All six log methods are available. JSON shows request context; text
+          shows readable lines. This browser demo formats a single message; Node
+          also supports format arguments, child loggers and ANSI color.
+        </p>
+        <button id="log-context" type="button">Run logger</button>
         <pre id="log-output" class="terminal" aria-live="polite"></pre>
-<p class="tool-links"><a href="https://github.com/DeployAnyway/doggo-log#readme">Usage and API documentation</a> · <a href="https://www.npmjs.com/package/@deployanyway/doggo-log">Install from npm</a> · <a href="https://github.com/DeployAnyway/doggo-log/issues/new/choose">Bugs and ideas</a></p></section>
-<section class="tool-section" id="ship-it-meter" aria-labelledby="ship-it-meter-title"><h2 id="ship-it-meter-title">ship-it-meter</h2><p>Evaluate release evidence and see whether the release gate passes. A joke score is no substitute for tests.</p>        <label
+        <p class="tool-links">
+          <a href="https://github.com/DeployAnyway/doggo-log#readme"
+            >Usage and API documentation</a
+          >
+          ·
+          <a href="https://www.npmjs.com/package/@deployanyway/doggo-log"
+            >Install from npm</a
+          >
+          ·
+          <a href="https://github.com/DeployAnyway/doggo-log/issues/new/choose"
+            >Bugs and ideas</a
+          >
+        </p>
+      </section>
+      <section
+        class="tool-section"
+        id="ship-it-meter"
+        aria-labelledby="ship-it-meter-title"
+      >
+        <h2 id="ship-it-meter-title">ship-it-meter</h2>
+        <p>
+          Evaluate release evidence and see whether the release gate passes. A
+          joke score is no substitute for tests.
+        </p>
+        <label
           >Release evidence (JSON)<textarea id="evidence">
-{"tests":42,"coverage":92,"build":true}</textarea></label
-        ><p>Change the evidence to see why a gate passes or blocks. Missing evidence can be explored by editing the JSON. This is a heuristic, not deployment approval.</p><button id="gate" type="button">Evaluate evidence</button>
+{"tests":42,"coverage":92,"build":true}</textarea>
+        </label>
+        <p>
+          Change the evidence to see why a gate passes or blocks. Missing
+          evidence can be explored by editing the JSON. This is a heuristic, not
+          deployment approval.
+        </p>
+        <button id="gate" type="button">Evaluate evidence</button>
         <pre id="gate-output" class="terminal" aria-live="polite"></pre>
-<p class="tool-links"><a href="https://github.com/DeployAnyway/ship-it-meter#readme">Usage and API documentation</a> · <a href="https://www.npmjs.com/package/@deployanyway/ship-it-meter">Install from npm</a> · <a href="https://github.com/DeployAnyway/ship-it-meter/issues/new/choose">Bugs and ideas</a></p></section>
+        <p class="tool-links">
+          <a href="https://github.com/DeployAnyway/ship-it-meter#readme"
+            >Usage and API documentation</a
+          >
+          ·
+          <a href="https://www.npmjs.com/package/@deployanyway/ship-it-meter"
+            >Install from npm</a
+          >
+          ·
+          <a
+            href="https://github.com/DeployAnyway/ship-it-meter/issues/new/choose"
+            >Bugs and ideas</a
+          >
+        </p>
+      </section>
       <section aria-labelledby="feedback-title">
         <h2 id="feedback-title">Help us make 0.3.1 useful.</h2>
         <p>
