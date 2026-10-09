@@ -106,7 +106,8 @@ function panel(anchor, id, title, description, fields, run) {
     copy,
     status,
   );
-  el(anchor).closest("section").append(details);
+  const section = el(anchor).closest("section");
+  section.querySelector("h2").nextElementSibling.after(details);
   render();
 }
 const pretty = (v) => JSON.stringify(v, null, 2),
