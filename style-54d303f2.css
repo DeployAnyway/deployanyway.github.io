@@ -139,3 +139,16 @@ main {
     font-size: 2rem;
   }
 }
+
+.manifesto { font-size: 1.4rem; max-width: 850px; line-height: 1.5; }
+.tool-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; margin:32px 0; }
+.tool-grid a { display:flex; flex-direction:column; gap:12px; padding:20px; border:1px solid #aba2bd; border-radius:12px; text-decoration:none; background:#fffaf1; }
+.tool-grid strong { font-size:1.1rem; }
+.tool-grid small { color:#242333; line-height:1.6; }
+.tool-section { border-top:1px solid #aba2bd; padding-top:24px; margin-top:48px; scroll-margin-top:20px; }
+.tool-section h2 { font-size:1.8rem; }
+.tool-section > label { margin-top:20px; }
+.tool-section > pre { margin-top:18px; }
+.tool-links { line-height:1.8; }
+
+.demo-controls {margin-top:20px;} .command {white-space:pre-wrap;overflow-wrap:anywhere;background:#e9e2f4;padding:16px;border-radius:8px;} .tool-section > pre {white-space:pre-wrap;overflow-wrap:anywhere;} label:has(input[type=checkbox]) {display:flex;align-items:center;} @media(max-width:600px){.demo-controls{grid-template-columns:1fr;} }
