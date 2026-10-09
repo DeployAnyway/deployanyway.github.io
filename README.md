@@ -2,7 +2,7 @@
 
 Public interactive demo: https://deployanyway.github.io/
 
-Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inputs stay in the browser. The five demos use vendored 0.3.0 package source; the dog logger uses a single-string `node:util` adapter because the form does not accept formatting arguments. This adapter is not a replacement for the npm library's full Node formatting behavior.
+Static HTML, CSS and browser ES modules. No analytics, accounts or backend. Inputs stay in the browser. The five demos use vendored 0.4.0 package source; the dog logger uses a single-string `node:util` adapter because the form does not accept formatting arguments. This adapter is not a replacement for the npm library's full Node formatting behavior.
 
 ## Develop
 
@@ -12,6 +12,17 @@ The root introduces DeployAnyway and gives all five released tools equal discove
 
 To refresh demos, copy the four companion packages' browser-safe `src/*.js` and MIT licenses into `vendor/<package>/`. Build bro-say and copy its `dist/browser.js` and third-party license notices into this site's `dist/`. Review API changes and verify all browser interactions. The site does not fetch package code from a third-party CDN at runtime.
 
+## Explore the released libraries
+
+- bro-say: 13 original characters, 20 moods, six themes and 48 message presets. Choose a category to inspect all six messages; seeded selection is repeatable within this version.
+- error-translator: 46 supported errors, full catalog, custom messages and JSON batches. Unknown input receives an explicit fallback.
+- excuse-js: 132 original excuses across eleven categories. Inspect each category, generate seeded batches or pair a phrase with a practical next step.
+- doggo-log: 48 optional commentary lines across six levels. Explore classic or rotating commentary, an eight-log sequence, filtering and structured context. Sequence and catalog examples use the Node API and include installation/run instructions.
+- ship-it-meter: twelve example evidence scenarios, editable JSON, prioritized release plans, gates and scores. These are heuristics based on supplied facts; the browser does not run your CI.
+
+The organization palette and home badge follow the supplied husky artwork. Dallas and Benji inspire the story and playful tone. All five tools retain equal discovery and feedback links.
+
 ## License
 
 MIT. Vendored package licenses are included in their directories.
+

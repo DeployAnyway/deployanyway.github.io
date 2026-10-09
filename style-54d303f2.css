@@ -84,6 +84,16 @@ pre {
   margin: 0;
   white-space: pre;
 }
+.preset-library {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 16px;
+  color: #f4eee3;
+}
+.tool-section > .terminal {
+  max-height: 36rem;
+  overflow: auto;
+}
 #status {
   min-height: 1.5em;
   color: #7e321e;
