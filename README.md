@@ -25,4 +25,3 @@ The organization palette and home badge follow the supplied husky artwork. Dalla
 ## License
 
 MIT. Vendored package licenses are included in their directories.
-
