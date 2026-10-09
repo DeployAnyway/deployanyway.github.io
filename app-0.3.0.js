@@ -20,20 +20,31 @@ for (const [id, names, selected] of [
 }
 function render() {
   try {
-    element("output").textContent = renderBro({
+    const random = element("bro-selection").value === "random";
+    for(const id of ["character","mood","theme"]) element(id).disabled=random;
+    element("bro-seed").disabled=!random;
+    const result = renderBro({
       text: element("message").value,
-      character: element("character").value,
-      mood: element("mood").value,
-      theme: element("theme").value,
+      character: random ? undefined : element("character").value,
+      mood: random ? undefined : element("mood").value,
+      theme: random ? undefined : element("theme").value,
       mode: element("mode").value,
       width: Number(element("width").value),
-    }).rendered;
+      wrap:element("bro-wrap").checked,
+      ...(element("bro-layout").value === "plain" ? {layout:"plain"} : element("bro-layout").value === "box" ? {box:true} : {}),
+          ...(random ? {random:true, seed:element("bro-seed").value} : {})
+    });
+    element("output").textContent=element("bro-format").value === "json" ? JSON.stringify(result,null,2) : result.rendered;
+    const quote=value=>"'"+value.replaceAll("'", "'\\''")+"'";
+    element("bro-command").textContent=`npx @deployanyway/bro-say@0.3.0 ${quote(element("message").value)} --width ${element("width").value}` + (random ? ` --random --seed ${quote(element("bro-seed").value)}` : ` --character ${element("character").value} --mood ${element("mood").value} --theme ${element("theme").value}`) + (element("mode").value === "think" ? " --think" : "") + (element("bro-format").value === "json" ? " --json" : "") + (!element("bro-wrap").checked ? " --no-wrap" : "") + (element("bro-layout").value === "plain" ? " --plain" : element("bro-layout").value === "box" ? " --box" : "");
     element("status").textContent = "";
     element("copy").disabled = false;
+    element("bro-copy-command").disabled=false;
   } catch (error) {
     element("status").textContent = error.message;
     element("output").textContent = "";
     element("copy").disabled = true;
+    element("bro-copy-command").disabled=true; element("bro-command").textContent="";
   }
 }
 element("controls").addEventListener("input", render);
@@ -50,3 +61,6 @@ element("copy").addEventListener("click", async () => {
   }
 });
 render();
+
+element("bro-copy-command").addEventListener("click",async()=>{try {await navigator.clipboard.writeText(element("bro-command").textContent);element("status").textContent="Command copied.";} catch {element("status").textContent="Select and copy the command manually.";}});
+
