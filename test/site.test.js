@@ -8,8 +8,8 @@ test("root loads released flagship controls and local assets", () => {
   assert.match(html, /id="theme"/);
   assert.match(html, /id="mode"/);
   for (const asset of [
-    "app-0.4.0.js",
-    "siblings-0.4.0.js",
+    "app-1.0.0.js",
+    "siblings-1.0.0.js",
     "style-54d303f2.css",
   ]) {
     assert.ok(html.includes(asset));

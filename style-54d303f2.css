@@ -302,3 +302,28 @@ button {
     width: 140px;
   }
 }
+
+.value-demo {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #2c5568;
+  border-radius: 10px;
+  background: #111e27;
+}
+.value-demo summary {
+  cursor: pointer;
+  color: #60d5ff;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.value-demo textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+.value-demo .terminal,
+.value-demo .command {
+  max-width: 100%;
+  overflow: auto;
+}
