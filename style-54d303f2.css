@@ -327,3 +327,341 @@ button {
   max-width: 100%;
   overflow: auto;
 }
+
+/* Shared presentation: real huskies, compact introduction, clear wayfinding. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+body {
+  background: radial-gradient(ellipse at top right, #123241 0, #0b1015 45%);
+}
+main {
+  max-width: 1200px;
+  padding: 40px 28px 72px;
+}
+p {
+  line-height: 1.7;
+}
+a {
+  text-underline-offset: 0.2em;
+}
+img {
+  max-width: 100%;
+}
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -90px;
+  z-index: 30;
+  background: #09b7ef;
+  color: #07131a;
+  padding: 12px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #0b1015f5;
+  border-bottom: 1px solid #2c5568;
+}
+.nav-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #f4eee3;
+  font-size: 1.15rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.site-brand img {
+  width: 58px;
+  height: 58px;
+}
+.site-brand span span,
+.cyan {
+  color: #31c5f5;
+}
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+.site-header nav a {
+  color: #eee9df;
+  text-decoration: none;
+  padding: 9px 0;
+  font-size: 0.9rem;
+}
+.site-header nav a:hover {
+  color: #31c5f5;
+}
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 10px 0 32px;
+}
+.hero-copy {
+  min-width: 0;
+}
+.hero-copy h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  letter-spacing: -0.05em;
+  margin: 12px 0 20px;
+}
+.hero-copy .eyebrow {
+  color: #73d8f9;
+  line-height: 1.6;
+  margin-top: 0;
+}
+.hero-copy .manifesto {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.5;
+}
+.hero-copy > p:not(.manifesto):not(.eyebrow) {
+  color: #d5dedf;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 22px 0;
+}
+.button-link {
+  display: inline-block;
+  background: #09b7ef;
+  color: #07131a;
+  padding: 13px 18px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 750;
+}
+.button-link:hover {
+  background: #65d7fa;
+}
+.hero-note {
+  font-size: 0.85rem;
+}
+.husky-portraits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+.husky-portraits figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #3a5664;
+  border-radius: 16px;
+  background: #141d25;
+  box-shadow: 0 18px 35px #0005;
+}
+.husky-portraits img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+}
+.husky-portraits figcaption {
+  padding: 14px 16px;
+  display: grid;
+  gap: 4px;
+}
+.husky-portraits figcaption strong {
+  font-size: 1.15rem;
+}
+.husky-portraits figcaption span {
+  font-size: 0.8rem;
+  color: #b5c9d1;
+}
+.tool-intro {
+  border-top: 1px solid #2c5568;
+  padding-top: 20px;
+}
+.tool-intro h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 8px 0;
+}
+.tool-intro .eyebrow {
+  color: #73d8f9;
+  margin-bottom: 6px;
+}
+.muted {
+  color: #b5c9d1;
+  font-size: 0.9rem;
+}
+.tool-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 22px 0;
+  scroll-margin-top: 110px;
+}
+.tool-grid a {
+  padding: 18px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #172732, #141d25);
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+.tool-grid a:hover {
+  border-color: #31c5f5;
+  background: #1a303c;
+}
+.tool-grid a span {
+  color: #c6d6dc;
+  font-size: 0.9rem;
+}
+.tool-grid strong {
+  color: #60d5ff;
+}
+.tool-section {
+  scroll-margin-top: 110px;
+  padding-top: 32px;
+}
+.tool-section h2 {
+  color: #60d5ff;
+}
+.reading-page {
+  max-width: 900px;
+}
+.reading-page > h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.reading-page > p {
+  max-width: 760px;
+}
+.story-portraits {
+  max-width: 700px;
+  margin: 28px 0;
+}
+.story-portraits img {
+  height: 340px;
+}
+.adventure-photo {
+  max-width: 700px;
+  margin: 32px 0;
+  border: 1px solid #3a5664;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #141d25;
+}
+.adventure-photo img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  display: block;
+  background: #07131a;
+}
+.adventure-photo figcaption {
+  padding: 14px 20px;
+  color: #b5c9d1;
+  line-height: 1.5;
+}
+@media (max-width: 1050px) {
+  .tool-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .home-hero {
+    gap: 26px;
+  }
+  .husky-portraits img {
+    height: 270px;
+  }
+}
+@media (max-width: 800px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .husky-portraits {
+    max-width: 620px;
+  }
+  .husky-portraits img {
+    height: 240px;
+  }
+  .nav-shell {
+    gap: 10px;
+  }
+  .site-header nav {
+    gap: 5px 12px;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 26px 16px 48px;
+  }
+  .nav-shell {
+    padding: 8px 16px;
+    flex-wrap: wrap;
+  }
+  .site-brand img {
+    width: 42px;
+    height: 42px;
+  }
+  .site-header nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .site-header nav a {
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+  .hero-copy h1 {
+    font-size: 2.9rem;
+  }
+  .husky-portraits {
+    gap: 10px;
+  }
+  .husky-portraits img {
+    height: 210px;
+  }
+  .husky-portraits figcaption {
+    padding: 11px;
+  }
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+  .tool-grid a {
+    gap: 6px;
+    padding: 16px 18px;
+  }
+  .why,
+  .value-demo {
+    padding: 18px;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  .story-portraits img {
+    height: 240px;
+  }
+  .adventure-photo img {
+    max-height: 450px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .tool-grid a {
+    transition: none;
+  }
+}
