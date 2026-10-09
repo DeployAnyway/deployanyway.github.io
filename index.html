@@ -12,13 +12,13 @@
     </title>
     <link rel="canonical" href="https://deployanyway.github.io/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style-54d303f2.css?v=stable-1.0.0" />
+    <link rel="stylesheet" href="style-54d303f2.css?v=stable-1.0.1" />
     <script type="importmap">
       { "imports": { "node:util": "./browser-format.js" } }
     </script>
-    <script type="module" src="app-1.0.0.js?v=stable-1.0.0"></script>
-    <script type="module" src="siblings-1.0.0.js?v=stable-1.0.0"></script>
-    <script type="module" src="value-1.0.0.js"></script>
+    <script type="module" src="app-1.0.0.js?v=stable-1.0.1"></script>
+    <script type="module" src="siblings-1.0.0.js?v=stable-1.0.1"></script>
+    <script type="module" src="value-1.0.0.js?v=stable-1.0.1"></script>
   </head>
   <body>
     <main>
@@ -66,34 +66,37 @@
         <a href="#bro-say"
           ><strong>bro-say</strong><span>Give your terminal a personality</span
           ><small
-            >Turn your message into original character art with speech or
-            thought bubbles, personalities and themes.</small
+            >Render measured build/test summaries or turn your message into
+            original character art with speech or thought bubbles, personalities
+            and themes.</small
           ></a
         ><a href="#error-translator"
           ><strong>error-translator</strong
           ><span>Make errors understandable</span
           ><small
-            >Explore 46 supported error codes, a full catalog, custom messages
-            and batches with explanations and practical debugging advice.</small
+            >Follow Error cause chains or explore 46 supported codes, custom
+            messages and batches with practical debugging advice.</small
           ></a
         ><a href="#excuse-js"
           ><strong>excuse-js</strong
           ><span>Own the problem. Enjoy the excuse.</span
           ><small
-            >Generate a seeded developer excuse, then get a useful next step for
-            the actual work.</small
+            >Draft accountable incident updates from known facts, or generate a
+            seeded developer excuse with a useful next step.</small
           ></a
         ><a href="#doggo-log"
           ><strong>doggo-log</strong><span>Good logs. Good dog.</span
           ><small
-            >Write readable or structured logs with levels, prefixes and context
-            for following a request.</small
+            >Carry request context through async Node work, redact configured
+            secrets, and write readable or structured logs with optional husky
+            commentary.</small
           ></a
         ><a href="#ship-it-meter"
           ><strong>ship-it-meter</strong><span>Confidence, with receipts</span
           ><small
-            >Evaluate release evidence and see whether the release gate passes.
-            A joke score is no substitute for tests.</small
+            >Gate releases with Node/Jest test reports, coverage and build
+            receipts; see blockers and repair tasks. Bring actual evidence, not
+            just confidence.</small
           ></a
         >
       </nav>
@@ -104,8 +107,9 @@
       <section class="tool-section" id="bro-say" aria-labelledby="bro-title">
         <h2 id="bro-title">bro-say</h2>
         <p>
-          Turn your message into original character art with speech or thought
-          bubbles, personalities and themes.
+          Render measured build/test summaries or turn your message into
+          original character art with speech or thought bubbles, personalities
+          and themes.
         </p>
         <div class="playground">
           <form id="controls">
@@ -191,8 +195,8 @@ The deployment succeeded somehow. 👋</textarea>
       >
         <h2 id="error-translator-title">error-translator</h2>
         <p>
-          Explore 46 supported error codes, a full catalog, custom messages and
-          batches with explanations and practical debugging advice.
+          Follow Error cause chains or explore 46 supported codes, custom
+          messages and batches with practical debugging advice.
         </p>
         <label
           >Error batch (JSON array)<textarea id="errors">
@@ -221,8 +225,8 @@ The deployment succeeded somehow. 👋</textarea>
       >
         <h2 id="excuse-js-title">excuse-js</h2>
         <p>
-          Generate a seeded developer excuse, then get a useful next step for
-          the actual work.
+          Draft accountable incident updates from known facts, or generate a
+          seeded developer excuse with a useful next step.
         </p>
         <p>
           Explore 132 original excuses across 11 categories: a repeatable seed,
@@ -253,8 +257,9 @@ The deployment succeeded somehow. 👋</textarea>
       >
         <h2 id="doggo-log-title">doggo-log</h2>
         <p>
-          Write readable or structured logs with levels, prefixes and context
-          for following a request.
+          Carry request context through async Node work, redact configured
+          secrets, and write readable or structured logs with optional husky
+          commentary.
         </p>
         <label>Request ID<input id="request-id" value="demo-42" /></label>
         <p>
