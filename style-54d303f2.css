@@ -222,6 +222,9 @@ label:has(input[type="checkbox"]) {
 }
 
 /* Palette from the supplied husky developer badge. */
+[hidden] {
+  display: none !important;
+}
 :root {
   background: #0b1015;
   color: #f4eee3;
