@@ -12,12 +12,12 @@
     </title>
     <link rel="canonical" href="https://deployanyway.github.io/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style-54d303f2.css?v=husky-1" />
+    <link rel="stylesheet" href="style-54d303f2.css?v=rich-0.4" />
     <script type="importmap">
       { "imports": { "node:util": "./browser-format.js" } }
     </script>
-    <script type="module" src="app-0.3.0.js?v=toolbox-1"></script>
-    <script type="module" src="siblings-0.3.0.js?v=toolbox-1"></script>
+    <script type="module" src="app-0.4.0.js?v=rich-0.4"></script>
+    <script type="module" src="siblings-0.4.0.js?v=rich-0.4"></script>
   </head>
   <body>
     <main>
@@ -31,7 +31,7 @@
           width="220"
           height="220"
       /></a>
-      <p class="eyebrow">0.3.0 · AVAILABLE ON NPM</p>
+      <p class="eyebrow">0.4.0 · AVAILABLE ON NPM</p>
       <h1>DeployAnyway.</h1>
       <p class="manifesto">
         Software nobody requested, built with questionable priorities, and
@@ -72,8 +72,8 @@
           ><strong>error-translator</strong
           ><span>Make errors understandable</span
           ><small
-            >Translate familiar error codes and messages into explanations and
-            practical debugging advice.</small
+            >Explore 46 supported error codes, a full catalog, custom messages
+            and batches with explanations and practical debugging advice.</small
           ></a
         ><a href="#excuse-js"
           ><strong>excuse-js</strong
@@ -97,7 +97,7 @@
         >
       </nav>
       <p>
-        All five packages are AVAILABLE ON NPM at version 0.3.0. These demos run
+        All five packages are AVAILABLE ON NPM at version 0.4.0. These demos run
         locally in your browser.
       </p>
       <section class="tool-section" id="bro-say" aria-labelledby="bro-title">
@@ -165,12 +165,13 @@ The deployment succeeded somehow. 👋</textarea>
           </div>
         </div>
         <p>
-          13 original characters, 12 personalities and 6 themes. Say or think;
-          Unicode-aware wrapping. Terminal fonts may disagree on emoji width.
+          13 original characters, 20 moods, 6 themes and 48 message presets
+          across 8 categories. Say or think; Unicode-aware wrapping. Terminal
+          fonts may disagree on emoji width.
         </p>
         <p>Runs entirely in your browser. No message is sent anywhere.</p>
         <p>
-          <code>npm install -g @deployanyway/bro-say@0.3.0</code> ·
+          <code>npm install -g @deployanyway/bro-say@0.4.0</code> ·
           <a href="https://www.npmjs.com/org/deployanyway"
             >All five packages on npm</a
           >
@@ -189,8 +190,8 @@ The deployment succeeded somehow. 👋</textarea>
       >
         <h2 id="error-translator-title">error-translator</h2>
         <p>
-          Translate familiar error codes and messages into explanations and
-          practical debugging advice.
+          Explore 46 supported error codes, a full catalog, custom messages and
+          batches with explanations and practical debugging advice.
         </p>
         <label
           >Error batch (JSON array)<textarea id="errors">
@@ -223,8 +224,9 @@ The deployment succeeded somehow. 👋</textarea>
           the actual work.
         </p>
         <p>
-          Choose every supported category, a repeatable seed, a single excuse, a
-          batch or an excuse with an honest next step.
+          Explore 132 original excuses across 11 categories: a repeatable seed,
+          a single excuse, a batch, the full category catalog or an excuse with
+          an honest next step.
         </p>
         <label>Excuse category<select id="excuse-category"></select></label
         ><button id="excuse-report" type="button">Generate excuse</button>
@@ -256,8 +258,10 @@ The deployment succeeded somehow. 👋</textarea>
         <label>Request ID<input id="request-id" value="demo-42" /></label>
         <p>
           All six log methods are available. JSON shows request context; text
-          shows readable lines. This browser demo formats a single message; Node
-          also supports format arguments, child loggers and ANSI color.
+          shows readable lines. Explore 48 commentary lines across six levels,
+          classic or rotating barks, and an eight-log sequence. This browser
+          demo formats string messages; Node also supports format arguments,
+          child loggers and ANSI color.
         </p>
         <button id="log-context" type="button">Run logger</button>
         <pre id="log-output" class="terminal" aria-live="polite"></pre>
@@ -282,8 +286,9 @@ The deployment succeeded somehow. 👋</textarea>
       >
         <h2 id="ship-it-meter-title">ship-it-meter</h2>
         <p>
-          Evaluate release evidence and see whether the release gate passes. A
-          joke score is no substitute for tests.
+          Load any of 12 evidence scenarios, edit the facts and see prioritized
+          release plans, gates or scores. A joke score is no substitute for
+          tests.
         </p>
         <label
           >Release evidence (JSON)<textarea id="evidence">
@@ -312,7 +317,7 @@ The deployment succeeded somehow. 👋</textarea>
         </p>
       </section>
       <section aria-labelledby="feedback-title">
-        <h2 id="feedback-title">Help us make 0.3.1 useful.</h2>
+        <h2 id="feedback-title">Help us make the next release useful.</h2>
         <p>
           Tell us your package version, OS, terminal/font and a small
           reproduction. Original workplace-safe character ideas are welcome.
