@@ -6,7 +6,7 @@ import {
   broMessage,
   messageCategories,
   messagePresets,
-} from "./dist/browser.js";
+} from "./dist/browser-1.0.0.js";
 
 const element = (id) => document.getElementById(id);
 for (const [id, names, selected] of [

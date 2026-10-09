@@ -3,14 +3,14 @@ import {
   listCharacters,
   moods,
   listThemes,
-} from "./dist/browser.js";
+} from "./dist/browser-1.0.0.js";
 import {
   diagnoseError,
   renderDiagnosis,
-} from "./vendor/error-translator/index.js";
-import { incidentUpdate } from "./vendor/excuse-js/index.js";
-import { createDogLogger } from "./vendor/doggo-log/index.js";
-import { evaluateReports } from "./vendor/ship-it-meter/index.js";
+} from "./vendor/v1/error-translator/index.js";
+import { incidentUpdate } from "./vendor/v1/excuse-js/index.js";
+import { createDogLogger } from "./vendor/v1/doggo-log/index.js";
+import { evaluateReports } from "./vendor/v1/ship-it-meter/index.js";
 const el = (id) => document.getElementById(id),
   quote = (s) => "'" + String(s).replaceAll("'", "'\\''") + "'";
 const control = (id, label, value, choices) => {

@@ -29,3 +29,5 @@ MIT. Vendored package licenses are included in their directories.
 ## Practical v1 integrations
 
 Each tool keeps its playful library and adds an equally visible developer-value panel: measured build summaries, Error cause diagnostics, accountable incident drafts, context redaction plus a runnable Node async-scope example, and report-backed release policies. The browser runs actual pure package APIs. AsyncLocalStorage, file reading, CI report collection and process exit preservation run in Node; examples identify those boundaries. Demo receipt data is labeled sample data, never claimed as real CI evidence.
+
+Browser entry scripts and their v1 bundle/vendor directories use release-specific paths. Changing only entry-script queries is insufficient when cached dependent modules have gained exports. Refresh the versioned dependency paths together with entry scripts.

@@ -4,15 +4,15 @@ import {
   translateError,
   translateErrors,
   renderTranslation,
-} from "./vendor/error-translator/index.js";
+} from "./vendor/v1/error-translator/index.js";
 import {
   listExcuses,
   categories,
   excuse,
   excuseBatch,
   excuseReport,
-} from "./vendor/excuse-js/index.js";
-import { barkLines, createDogLogger } from "./vendor/doggo-log/index.js";
+} from "./vendor/v1/excuse-js/index.js";
+import { barkLines, createDogLogger } from "./vendor/v1/doggo-log/index.js";
 import {
   releasePlan,
   releaseScenarios,
@@ -20,7 +20,7 @@ import {
   releaseGate,
   preflight,
   shipIt,
-} from "./vendor/ship-it-meter/index.js";
+} from "./vendor/v1/ship-it-meter/index.js";
 const el = (id) => document.getElementById(id);
 const q = (value) => "'" + String(value).replaceAll("'", "'\\''") + "'";
 const select = (id, label, values, selected) => {
